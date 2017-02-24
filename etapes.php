@@ -1,13 +1,3 @@
-<?php
-/*
-$validIp = array("84.14.220.210","82.224.238.93");
-
-if (!in_array($_SERVER['REMOTE_ADDR'], $validIp)) {
-		echo "vous n'avez pas le droit d'acc&egrave;s &agrave; cette page.";
-		die();
-}
-*/
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -41,14 +31,11 @@ if (!in_array($_SERVER['REMOTE_ADDR'], $validIp)) {
 
 			<div class="titre">Choisir votre étape : </div>
 				<ul>
-					<li class="disabled"><div data-id="1" class="selStep hab1">Les attentes clefs des collaborateurs</div></li>
-					<li class="disabled"><div data-id="2" class="selStep hab2">Se mettre dans la peau d’un collaborateur</div></li>
-					<li class="disabled"><div data-id="3" class="selStep hab3">Profil sensoriel du collaborateur</div></li>
-					<li class="disabled"><div data-id="4" class="selStep hab4">Écriture de la promesse relationnelle</div></li>
-					<li class="disabled"><div data-id="5" class="selStep hab5">Les comportements cibles</div></li>
-					<li class="disabled"><div data-id="6" class="selStep hab6">Les comportements cibles suite (prise de recul)</div></li>
-					<li class="disabled"><div data-id="7" class="selStep hab7">Développer des relations de travail positives</div></li>
-					<li class="disabled"><div data-id="8" class="selStep hab8">Le mot de la fin</div></li>
+					<li class="disabled"><div data-id="1" class="selStep hab1">Titre Sequence 1</div></li>
+					<li class="disabled"><div data-id="2" class="selStep hab2">Titre Sequence 2</div></li>
+					<li class="disabled"><div data-id="3" class="selStep hab3">Titre Sequence 3</div></li>
+					<li class="disabled"><div data-id="4" class="selStep hab4">Titre Sequence 4</div></li>
+					<li class="disabled"><div data-id="5" class="selStep hab5">Titre Sequence 5</div></li>
 				</ul>
 			</section>
 			<!-- [ /CONTENT ] -->
@@ -79,9 +66,6 @@ if (!in_array($_SERVER['REMOTE_ADDR'], $validIp)) {
                         HandleAjaxElement(l_JSON, 3);
                         HandleAjaxElement(l_JSON, 4);
                         HandleAjaxElement(l_JSON, 5);
-                        HandleAjaxElement(l_JSON, 6);
-                        HandleAjaxElement(l_JSON, 7);
-                        HandleAjaxElement(l_JSON, 8);
                     }
                 });
             }, 500);

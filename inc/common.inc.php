@@ -1,7 +1,7 @@
 <?php
 
 $BDD_SERV = "localhost";
-$BDD = "anim-hm";
+$BDD = "anim-total";
 $BDD_LOG = "root";
 $BDD_PASS = "";
 
@@ -30,15 +30,18 @@ function	openDb(){
 //-----------------------------------------------------
 function getQuestData($group,$quest){
 	global	$msock;
-	$sql = "SELECT valeur FROM reponses WHERE groupe='".$group."' AND etape='".$quest."'";
+	$sql = "SELECT valeur FROM reponses_total WHERE groupe='".$group."' AND etape='".$quest."'";
 	if(!($res = mysql_query($sql, $msock)))
 		return false;
 	return mysql_fetch_array($res);
 }
 
 function writeTolog($log){
-	return;
-	$fh=fopen('c:\log.txt',"a");
+	//return;
+    $urlLog = 'c:\log.txt';
+    $urlLog = 'c:\Users\jlegoff\Documents\GitHub\TOTAL_Atelier2017\log.txt';
+
+	$fh=fopen($urlLog,"a");
 	fwrite($fh,$log);
 	fclose($fh);
 }

@@ -14,7 +14,7 @@ BODY { background-color:#000;}
 .choixGroupe LI DIV  {position:relative;margin:auto;color:white;width:140px;text-align:center;padding-top: 60px;height: 81px;}
 
 .choixEtape {position:relative; width:1000px; height:665px; margin:auto;border:1px solid #E94A3D}
-.choixEtape LI {position:relative;float:left;margin:20px;width:200px;height:140px;background:#E94A3D;list-style:none;cursor:pointer;}
+.choixEtape LI {position:relative;float:left;margin:20px;width:270px;height:200px;background:#E94A3D;list-style:none;cursor:pointer;}
 .choixEtape LI DIV  {position:relative;color:white;width:180px;height:100px;text-align:center;padding-top:50px;padding-left:10px;padding-right:10px;}
 .choixEtape .disabled {background-color: grey !important;}
 
@@ -23,9 +23,6 @@ BODY { background-color:#000;}
 .hab3 {background:url('../imgs/3.png') no-repeat}
 .hab4 {background:url('../imgs/4.png') no-repeat}
 .hab5 {background:url('../imgs/5.png') no-repeat}
-.hab6 {background:url('../imgs/6.png') no-repeat}
-.hab7 {background:url('../imgs/7.png') no-repeat}
-.hab8 {background:url('../imgs/8.png') no-repeat}
 
 .loadAnim {float:right;display:none;}
 .contentQuest {margin-top:10px;}
@@ -33,16 +30,8 @@ BODY { background-color:#000;}
 .colRight	{width:650px;float:left;margin-left:40px;margin-top:15px;}
 .bigNumber	{font-size:75px;color:gray;font-weight:bold;}
 .txtQuest	{font-size:18px;color:white;}
+.txtQuestEn {font-size:18px;color:#AAAAAA;font-style:italic;}
 .validbuts	{margin-top:20px;text-align:right;}
-
-.lksee		{color:#999999;cursor:pointer;}
-.closePop	{background-color:white;float:right;padding:5px;cursor:pointer;}
-.popStyle	{position:absolute;background-color:gray;border:10px solid #E94A3D;width:600px;top:130px;left:-1000px;}
-
-.popStyle Table {border-collapse: collapse;border:1px solid gray}
-.popStyle Table th, td { padding: 5px; text-align: center; }
-.popStyle Table th { background-color:white;padding: 5px; text-align: center; }
-
 
 #but {
     background-color: #E94A3D;
@@ -84,29 +73,12 @@ input[type="text"].focus {
 	border-bottom: solid 5px #E94A3D;
 }
 
-.inpEtap2 {width:208px;margin-right:2px;}
-.inpEtap5 {width:485px;}
-.inpEtap6 {width:485px;}
-.inpEtap8 {width:485px;}
-
-TEXTAREA		{outline:none;resize:none;border-bottom: solid 5px gray;margin-bottom:10px;}
-TEXTAREA:focus	{outline:none;resize:none;border-bottom: solid 5px #E94A3D;margin-bottom:10px;}
-
+TEXTAREA		{width:500px;outline:none;resize:none;border-bottom: solid 5px gray;margin-bottom:10px;}
+TEXTAREA:focus	{width:500px;outline:none;resize:none;border-bottom: solid 5px #E94A3D;margin-bottom:10px;}
+/*
 .txtAreaQ1 {width:650px;height:100px;}
 .txtAreaQ3 {width:315px;height:150px;}
 .txtAreaQ4 {width:650px;height:350px;}
-
+*/
 .addField {float:right;width:25px;height:25px;font-size:20px;font-weight:bold;color:white;background-color:#E94A3D;padding:10px;text-align:center;cursor:pointer;}
 .delField {float:right;width:25px;height:25px;font-size:24px;font-weight:bold;color:white;background-color:gray;padding:10px;text-align:center;cursor:pointer;}
-
-.styled-select {
-   width: 240px;
-   height: 34px;
-   overflow: hidden;
-   border: 1px solid #ccc;
-   }
-
-
-.lastComporte {}
-.lastComporte UL {margin:0px;padding:0;margin-bottom:20px;}
-.lastComporte UL LI {color:white;position:relative;padding-left:5px;float:left;margin:5px;background:gray;list-style:none;cursor:pointer;}

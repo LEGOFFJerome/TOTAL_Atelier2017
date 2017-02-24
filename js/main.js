@@ -1,36 +1,23 @@
 // --------------------------------
-// NOLAROADS JANVIER 2017
+// USIDE JANVIER 2017
 // Author J.LEGOFF
 // --------------------------------
 
 jQuery(function($) {
 
-	if(readCookie('anim-hm') == '9'){
+	if(readCookie('total-anim') == '9'){
 		$('.choixEtape').css('background-color',"#333333");
-		$('.etape').css('background-color',"#333333");	
+		$('.etape').css('background-color',"#333333");
 	}
-
-
-	$('.lksee').click(function(){
-		$('.popStyle').css('display','block');
-		var toGo = ($( window ).width() / 2)-300;
-		$('.popStyle').animate({left: toGo});
-	});
-
-	$('.closePop').click(function(){
-		
-		$('.popStyle').animate({left: '-1000px'});
-	});
-
 	$(".intro").click(function() {
-		eraseCookie('anim-hm');
+		eraseCookie('total-anim');
 		$(".imgEnter").fadeTo( "slow" , 0, function() {document.location.href="groupes.php";});
 	});
 
     $(".selGroup").click(function () {
 		// on le planque dans le cookies
-		eraseCookie('anim-hm');
-		createCookie('anim-hm',$(this).attr("data-id"),10);
+		eraseCookie('total-anim');
+		createCookie('total-anim',$(this).attr("data-id"),10);
 		$(".choixGroupe").fadeTo( "slow" , 0, function() {document.location.href="etapes.php";});
 
 	});
@@ -60,19 +47,19 @@ jQuery(function($) {
 		$(".loadAnim").css ("display","block");
         var $this = $(this);
 
-		$.ajax({
+        $.ajax({
                 url: $this.attr('action'),
                 type: $this.attr('method'),
                 data: $this.serialize(),
                 dataType: 'json',
                 success: function(json) {
 					if(json.status) {
-						//console.log("stat OK" + json.message);
+						console.log("stat OK" + json.message);
 						$(".loadAnim").css ("display","none");
 						document.location.href ="etapes.php";
 
                     } else {
-						//console.log("stat KO"+ json.message );
+						console.log("stat KO"+ json.message );
 						$(".loadAnim").css ("display","none");
                     }
                 }
@@ -80,36 +67,12 @@ jQuery(function($) {
 
 	});
 
-	$("#addField2").click(function(){
+    $("#addField1").click(function () {
+        console.log("addField1");
 		var countBalise = $('#dynInputs > div').length;
-		if (countBalise < 8) // ATTENTION -1
+		if (countBalise < 5) // ATTENTION -1
  		{
-            $("#dynInputs").append('<div style="clear:both;margin-bottom:5px;"><input type="text" name="emotion' + countBalise +'" class="inpEtap2" placeholder="émotion"> <input type="text" name="raison' + countBalise +'" class="inpEtap2" placeholder="raisonnement"><div class="delField" onclick="javascript:delField(this);"> - </div></div>');
-		}
-	});
-
-	$("#addField5").click(function(){
-		var countBalise = $('#dynInputs > div').length;
-		if (countBalise < 10) // ATTENTION -1
- 		{
-            $("#dynInputs").append('<div style="clear:both;margin-bottom:5px;"><input type="text" name="dynField' + countBalise +'" class="inpEtap6"><div class="delField" onclick="javascript:delField(this);"> - </div></div>');
-		}
-	});
-
-
-	$("#addField6").click(function(){
-		var countBalise = $('#dynInputs > div').length;
-		if (countBalise < 10) // ATTENTION -1
- 		{
-            $("#dynInputs").append('<div style="clear:both;margin-bottom:5px;"><input type="text" name="dynField' + countBalise +'" class="inpEtap6"><div class="delField" onclick="javascript:delField(this);"> - </div></div>');
-		}
-	});
-
-	$("#addField8").click(function(){
-		var countBalise = $('#dynInputs > div').length;
-		if (countBalise < 10) // ATTENTION -1
- 		{
-            $("#dynInputs").append('<div style="clear:both;margin-bottom:5px;"><input type="text" name="dynField' + countBalise +'" class="inpEtap8"><div class="delField" onclick="javascript:delField(this);"> - </div></div>');
+            $("#dynInputs").append('<div style="clear:both;margin-bottom:5px;"><textarea  name="dynField' + countBalise +'" class="txtEtap1"></textarea><div class="delField" onclick="javascript:delField(this);"> - </div></div>');
 		}
 	});
 });
