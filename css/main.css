@@ -31,54 +31,25 @@ BODY { background-color:#000;}
 .bigNumber	{font-size:75px;color:gray;font-weight:bold;}
 .txtQuest	{font-size:18px;color:white;}
 .txtQuestEn {font-size:18px;color:#AAAAAA;font-style:italic;}
-.validbuts	{margin-top:20px;text-align:right;}
 
-#but {
-    background-color: #E94A3D;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
+.answer {width:595px; color:white;border:2px solid #E94A3D;padding:5px;margin-bottom: 10px;}
 
-#butRet{
-	/*width:100px;*/
-    background-color: gray;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
+TEXTAREA		{height:100px;width:600px;outline:none;resize:none;border-bottom: solid 5px gray;margin-bottom:10px;}
+TEXTAREA:focus	{border-bottom: solid 5px #E94A3D;}
 
-input[type="text"] {
-	/*width:213px;*/
-	padding: 10px;
-	border: none;
-	border-bottom: solid 5px gray;
-	transition: border 0.3s;
-}
+.recordField {display: block;width:110px;height:30px;font-size15px;font-weight:bold;color:white;background-color:#E94A3D;padding:5px;text-align:center;border:1px solid white;}
+.btBack {width:200px;height:25px;font-size:15px;font-weight:bold;color:white;background-color:gray;padding:5px;text-align:center;cursor:pointer;border:1px solid white;margin-top:10px}
+/*-------------------- ADMIN --------------------*/
+SECTION.admin {margin:auto;width:1000px;border:1px solid white;}
+SECTION.admin LI        {padding:5px;color:white;float:left;background:#E94A3D;list-style: none;margin-left:10px;border:1px solid gray;cursor: pointer;}
+SECTION.admin LI:hover  {padding:5px;color:black;float:left;background:white;list-style: none;margin-left:10px;border:1px solid gray;cursor: pointer;}
+SECTION.admin LI.li-on  {padding:5px;color:black;float:left;background:white;list-style: none;margin-left:10px;border:1px solid gray;cursor: pointer;}
 
-input[type="text"]:focus,
-input[type="text"].focus {
-	border-bottom: solid 5px #E94A3D;
-}
+.bigSelect {width: 30px;height: 30px;background: #333;border-radius: 50px;float:left;}
+.titAdmin {font-size:25px;display:block;margin-left:50px;color:white;font-weight: bold;}
+.phraseToSel {min-height:30px;margin-left:50px;color:white;font-size:15px;}
+.phraseContainer {border:1px solid gray;padding:5px;margin: 0 10px 10px 50px;}
+.grpId {font-size:11px;font-style: italic; color:#E94A3D}
+.introSelSentence {float:left;width:550px;font-size:15px;display:block;margin-left:50px;color:white;font-weight: bold;}
 
-TEXTAREA		{width:500px;outline:none;resize:none;border-bottom: solid 5px gray;margin-bottom:10px;}
-TEXTAREA:focus	{width:500px;outline:none;resize:none;border-bottom: solid 5px #E94A3D;margin-bottom:10px;}
-/*
-.txtAreaQ1 {width:650px;height:100px;}
-.txtAreaQ3 {width:315px;height:150px;}
-.txtAreaQ4 {width:650px;height:350px;}
-*/
-.addField {float:right;width:25px;height:25px;font-size:20px;font-weight:bold;color:white;background-color:#E94A3D;padding:10px;text-align:center;cursor:pointer;}
-.delField {float:right;width:25px;height:25px;font-size:24px;font-weight:bold;color:white;background-color:gray;padding:10px;text-align:center;cursor:pointer;}
+#previewSelected {cursor:pointer;margin-top:20px;float:left;width:200px;height:30px;font-size15px;font-weight:bold;color:white;background-color:#E94A3D;padding:5px;text-align:center;border:1px solid white;}

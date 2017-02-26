@@ -30,31 +30,18 @@ include "inc/common.inc.php";
 		<noscript>
             <div class="no-js-warning">Ce site nécessite l'utilisation de JavaScript!</div>
         </noscript>
-		<!-- [ CONTENT ] -->
-		<div class="globalContent">
-
-			<section class="etape">
-			<div class="loadAnim"><img src="imgs/spin.gif" width="30" height="30" border="0" alt=""></div>
-				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre groupe de travail</a> | <a href="etapes.php">choisir votre étape</a> | Étape 1 : </div>
-				<span class="titre">Le titre de la question</span>
-
-				<div class="contentQuest">
-					<div class="colLeft">
-					<span class="bigNumber">1</span>
-					<div class="txtQuest">La question en Francais</div>
-					<div class="txtQuestEn">English traduction of the question</div>
-                    <div class="btBack"> retour / back </div>
-                    </div>
-					<div class="colRight">
-						<div id="previous" style="color:white;">
-                            <?php
+		<div style="color:white;font-size:20px;">
+            <table border="0" width="100%" height="100%">
+            <?php
                             // Récupère pour le groupe la question les informations
                             if (openDb()){
-                                if (is_array($allAnswers = getQuestData($_COOKIE["total-anim"],1))){
+                                if (is_array($allAnswers = getSelQuestData($_GET['step']))){
                                     $combien = count($allAnswers);
+
                                     if ($combien){
+                                        $pourcentHeight = intval(100/$combien);
                                         while (list($id,$record) = each($allAnswers)){
-                                            echo '<div class="answer">'.$record['valeur'].'</div>';
+                                            echo '<tr height="'.$pourcentHeight.'%"><td align="center">'.$record['valeur'].'</td></tr>';
                                         }
                                     }
                                 }else{
@@ -65,24 +52,7 @@ include "inc/common.inc.php";
                                 die();
                             }
                             ?>
-                        </div>
-                        <form method="post" action="record.php" id="myForm" name="myForm">
-                            <div style="clear:both;margin-bottom:5px;">
-                                <input id="step" name="step" type="hidden" value="step1">
-								<?php
-                                if ($combien < $MAX_ANSWER){
-                                ?>
-                                <textarea name="phrase" id="phrase" class="txtEtap1" placeholder="phrase"></textarea>
-                                <div style="color:gray;font-size:15px;font-weight:bold;float:right"><?php echo($combien+1)." / ".$MAX_ANSWER; ?></div><input type="submit" class="recordField" id="recordField" value="enregistrer"/>
-                                <?php
-                                }
-                                ?>
-							</div>
-                        </form>
-					</div>
-				</div>
-			</section>
-			<!-- [ /CONTENT ] -->
+            </table>
 		</div>
 		<!-- [ /CONTENT ] -->
 		<!-- [ SCRIPT ] -->

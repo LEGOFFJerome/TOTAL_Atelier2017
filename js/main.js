@@ -39,11 +39,15 @@ jQuery(function($) {
 		}
 	});
 
-
+    $('.btBack').click(function () { document.location.href = 'etapes.php';});
 	$('#myForm').on('submit', function(e) {
 
 		e.preventDefault();
-
+        // on check si il ya quelque chose dans le champ
+        if (!$("#phrase").val()) {
+            // textarea is empty
+            return;
+        }
 		$(".loadAnim").css ("display","block");
         var $this = $(this);
 
@@ -55,8 +59,9 @@ jQuery(function($) {
                 success: function(json) {
 					if(json.status) {
 						console.log("stat OK" + json.message);
-						$(".loadAnim").css ("display","none");
-						document.location.href ="etapes.php";
+                        $(".loadAnim").css("display", "none");
+                        window.location.reload(true);
+						//document.location.href ="etape-1.php";
 
                     } else {
 						console.log("stat KO"+ json.message );
@@ -65,15 +70,6 @@ jQuery(function($) {
                 }
             });
 
-	});
-
-    $("#addField1").click(function () {
-        console.log("addField1");
-		var countBalise = $('#dynInputs > div').length;
-		if (countBalise < 5) // ATTENTION -1
- 		{
-            $("#dynInputs").append('<div style="clear:both;margin-bottom:5px;"><textarea  name="dynField' + countBalise +'" class="txtEtap1"></textarea><div class="delField" onclick="javascript:delField(this);"> - </div></div>');
-		}
 	});
 });
 

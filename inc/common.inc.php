@@ -11,7 +11,7 @@ $BDD = "ifasrgdsusidebdd";
 $BDD_LOG = "ifasrgdsusidebdd";
 $BDD_PASS = "uhgQs9878a";
 */
-
+$MAX_ANSWER = 5;
 /******** fonction open Db *************/
 function	openDb(){
 	global	$msock,$BDD_SERV,$BDD,$BDD_LOG,$BDD_PASS;
@@ -30,10 +30,55 @@ function	openDb(){
 //-----------------------------------------------------
 function getQuestData($group,$quest){
 	global	$msock;
-	$sql = "SELECT valeur FROM reponses_total WHERE groupe='".$group."' AND etape='".$quest."'";
-	if(!($res = mysql_query($sql, $msock)))
+	$sql = "SELECT * FROM reponses_total WHERE groupe='".$group."' AND etape='".$quest."' ORDER BY last_edit";
+
+    if(!($res = mysql_query($sql, $msock)))
 		return false;
-	return mysql_fetch_array($res);
+
+	$Result = array();
+	while($data = mysql_fetch_array($res))
+	{
+		$id = $data['id'];
+		$Result[$id] = $data;
+	}
+	return $Result;
+}
+
+//-----------------------------------------------------
+function getAllQuestData($quest){
+	global	$msock;
+	$sql = "SELECT * FROM reponses_total WHERE etape='".$quest."' ORDER BY last_edit";
+
+    if(!($res = mysql_query($sql, $msock)))
+		return false;
+
+	$Result = array();
+	while($data = mysql_fetch_array($res))
+	{
+		$id = $data['id'];
+		$Result[$id] = $data;
+	}
+	return $Result;
+}
+
+
+function getSelQuestData($step){
+
+    global	$msock;
+	$sql = "SELECT id,groupe,valeur FROM reponses_total WHERE etape='".$step."' AND is_sel=1 ORDER BY last_edit";
+
+    if(!($res = mysql_query($sql, $msock)))
+		return false;
+
+	$Result = array();
+	while($data = mysql_fetch_array($res))
+	{
+		$id = $data['id'];
+		$Result[$id] = $data;
+	}
+	return $Result;
+
+
 }
 
 function writeTolog($log){
@@ -45,6 +90,4 @@ function writeTolog($log){
 	fwrite($fh,$log);
 	fclose($fh);
 }
-
-
 ?>

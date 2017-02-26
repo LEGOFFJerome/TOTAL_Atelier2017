@@ -35,22 +35,22 @@ include "inc/common.inc.php";
 
 			<section class="etape">
 			<div class="loadAnim"><img src="imgs/spin.gif" width="30" height="30" border="0" alt=""></div>
-				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre groupe de travail</a> | <a href="etapes.php">choisir votre étape</a> | Étape 1 : </div>
+				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre groupe de travail</a> | <a href="etapes.php">choisir votre étape</a> | Étape 4 : </div>
 				<span class="titre">Le titre de la question</span>
 
 				<div class="contentQuest">
 					<div class="colLeft">
-					<span class="bigNumber">1</span>
+					<span class="bigNumber">5</span>
 					<div class="txtQuest">La question en Francais</div>
 					<div class="txtQuestEn">English traduction of the question</div>
                     <div class="btBack"> retour / back </div>
-                    </div>
+					</div>
 					<div class="colRight">
 						<div id="previous" style="color:white;">
                             <?php
                             // Récupère pour le groupe la question les informations
                             if (openDb()){
-                                if (is_array($allAnswers = getQuestData($_COOKIE["total-anim"],1))){
+                                if (is_array($allAnswers = getQuestData($_COOKIE["total-anim"],5))){
                                     $combien = count($allAnswers);
                                     if ($combien){
                                         while (list($id,$record) = each($allAnswers)){
@@ -68,12 +68,12 @@ include "inc/common.inc.php";
                         </div>
                         <form method="post" action="record.php" id="myForm" name="myForm">
                             <div style="clear:both;margin-bottom:5px;">
-                                <input id="step" name="step" type="hidden" value="step1">
+                                <input id="step" name="step" type="hidden" value="step2">
 								<?php
                                 if ($combien < $MAX_ANSWER){
                                 ?>
-                                <textarea name="phrase" id="phrase" class="txtEtap1" placeholder="phrase"></textarea>
-                                <div style="color:gray;font-size:15px;font-weight:bold;float:right"><?php echo($combien+1)." / ".$MAX_ANSWER; ?></div><input type="submit" class="recordField" id="recordField" value="enregistrer"/>
+								<textarea name="phrase" id="phrase" class="txtEtap1" placeholder="phrase"></textarea>
+								<div style="color:gray;font-size:15px;font-weight:bold;float:right"><?php echo($combien+1)." / ".$MAX_ANSWER; ?></div><input type="submit" class="recordField" id="recordField" value="enregistrer"/>
                                 <?php
                                 }
                                 ?>

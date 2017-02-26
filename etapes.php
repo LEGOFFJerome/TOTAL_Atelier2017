@@ -56,7 +56,7 @@
 
             setInterval(function() {
                 $.ajax({
-                    url: "etapes_states.php",
+                    url: "admin-etapes_states.php",
                     type: "GET",
                     success: function(p_Data){
                         l_JSON = jQuery.parseJSON(p_Data);
@@ -68,7 +68,7 @@
                         HandleAjaxElement(l_JSON, 5);
                     }
                 });
-            }, 500);
+            }, 1000);
         </script>
     </body>
 </html>

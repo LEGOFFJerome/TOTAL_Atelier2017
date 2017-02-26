@@ -49,14 +49,10 @@ function recordStep(){
 	global	$msock;
     // c'est quel step
     $stepActif = preg_replace("/[^0-9]/", "",$_POST['step']);
+    $textToStore = nl2br(htmlentities($_POST["phrase"], ENT_QUOTES, 'UTF-8'));
+	$sql ="INSERT INTO `reponses_total` (`groupe`, `etape`, `valeur`,`last_edit`) VALUES ('".$_COOKIE["total-anim"]."','".$stepActif."','".$textToStore."',UNIX_TIMESTAMP(now()))";
 
-	unset ($_POST['step']);
-	unset ($_POST['butRet']);
-
-	$toStore = json_encode(encodeArray($_POST));
-
-	$sql = "UPDATE reponses_total SET valeur='".$toStore."', last_edit=unix_timestamp() WHERE groupe='".$_COOKIE["total-anim"]."' AND etape='".$stepActif."'";
-	writeToLog($sql);
+    writeToLog($sql);
 
     if(!($res = mysql_query($sql, $msock)))
 		return false;
