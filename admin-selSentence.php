@@ -43,6 +43,16 @@ include "inc/common.inc.php";
                     <li id="selSentence3" <?php if ($_GET['step']==3){echo 'class="li-on"';} ?>>Phrases étapes 3</li>
                     <li id="selSentence4" <?php if ($_GET['step']==4){echo 'class="li-on"';} ?>>Phrases étapes 4</li>
                     <li id="selSentence5" <?php if ($_GET['step']==5){echo 'class="li-on"';} ?>>Phrases étapes 5</li>
+                    <li id="selSentence5">prev.<select onchange="javascript:if (this.value) window.open(this.value);">
+                            <option selected>-</option>
+                            <option value="admin-realTimeSentence.php?step=1">1</option>
+                            <option value="admin-realTimeSentence.php?step=2">2</option>
+                            <option value="admin-realTimeSentence.php?step=3">3</option>
+                            <option value="admin-realTimeSentence.php?step=4">4</option>
+                            <option value="admin-realTimeSentence.php?step=5">5</option>
+
+                        </select>
+                    </li>
                 </ul>
 
                 <div style="clear:both;float:none;">&nbsp;</div>

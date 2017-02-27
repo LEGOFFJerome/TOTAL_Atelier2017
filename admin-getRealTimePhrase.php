@@ -7,7 +7,7 @@
     openDb();
 
     global	$msock;
-    $l_Query = 'SELECT id,groupe,valeur,last_edit FROM `reponses_total` WHERE etape='.$_GET['step'].' AND last_edit > '.$_GET['lts'].' ORDER BY last_edit';
+    $l_Query = 'SELECT valeur,last_edit FROM `reponses_total` WHERE etape = '.$_GET['step'].' AND last_edit > '.$_GET['lts'].' ORDER BY last_edit';
 
     if($l_MySQLRes = mysql_query($l_Query, $msock))
     {

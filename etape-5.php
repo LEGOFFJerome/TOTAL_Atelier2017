@@ -68,7 +68,7 @@ include "inc/common.inc.php";
                         </div>
                         <form method="post" action="record.php" id="myForm" name="myForm">
                             <div style="clear:both;margin-bottom:5px;">
-                                <input id="step" name="step" type="hidden" value="step2">
+                                <input id="step" name="step" type="hidden" value="step5">
 								<?php
                                 if ($combien < $MAX_ANSWER){
                                 ?>

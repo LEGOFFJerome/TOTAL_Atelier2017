@@ -41,9 +41,9 @@ TEXTAREA:focus	{border-bottom: solid 5px #E94A3D;}
 .btBack {width:200px;height:25px;font-size:15px;font-weight:bold;color:white;background-color:gray;padding:5px;text-align:center;cursor:pointer;border:1px solid white;margin-top:10px}
 /*-------------------- ADMIN --------------------*/
 SECTION.admin {margin:auto;width:1000px;border:1px solid white;}
-SECTION.admin LI        {padding:5px;color:white;float:left;background:#E94A3D;list-style: none;margin-left:10px;border:1px solid gray;cursor: pointer;}
-SECTION.admin LI:hover  {padding:5px;color:black;float:left;background:white;list-style: none;margin-left:10px;border:1px solid gray;cursor: pointer;}
-SECTION.admin LI.li-on  {padding:5px;color:black;float:left;background:white;list-style: none;margin-left:10px;border:1px solid gray;cursor: pointer;}
+SECTION.admin LI        {padding:3px;color:white;float:left;background:#E94A3D;list-style: none;margin-left:5px;border:1px solid gray;cursor: pointer;}
+SECTION.admin LI:hover  {padding:3px;color:black;float:left;background:white;list-style: none;margin-left:5px;border:1px solid gray;cursor: pointer;}
+SECTION.admin LI.li-on  {padding:3px;color:black;float:left;background:white;list-style: none;margin-left:5px;border:1px solid gray;cursor: pointer;}
 
 .bigSelect {width: 30px;height: 30px;background: #333;border-radius: 50px;float:left;}
 .titAdmin {font-size:25px;display:block;margin-left:50px;color:white;font-weight: bold;}
@@ -53,3 +53,6 @@ SECTION.admin LI.li-on  {padding:5px;color:black;float:left;background:white;lis
 .introSelSentence {float:left;width:550px;font-size:15px;display:block;margin-left:50px;color:white;font-weight: bold;}
 
 #previewSelected {cursor:pointer;margin-top:20px;float:left;width:200px;height:30px;font-size15px;font-weight:bold;color:white;background-color:#E94A3D;padding:5px;text-align:center;border:1px solid white;}
+
+.phraseElem {border:5px solid #E94A3D; border-radius: 25px;color:gray;font-size:30px;max-width:60%;margin:auto;margin-top:400px;text-align: center;background-color: white;padding:10px;}
+

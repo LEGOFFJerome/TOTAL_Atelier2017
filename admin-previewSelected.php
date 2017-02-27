@@ -9,7 +9,7 @@ include "inc/common.inc.php";
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<html class="no-js" xmlns="http://www.w3.org/1999/html"  style="height:100%"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -23,15 +23,15 @@ include "inc/common.inc.php";
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body style="height:100%">
 		<!--[if lt IE 9]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 		<noscript>
             <div class="no-js-warning">Ce site nécessite l'utilisation de JavaScript!</div>
         </noscript>
-		<div style="color:white;font-size:20px;">
-            <table border="0" width="100%" height="100%">
+		<div style="color:white;font-size:24px;height:100%">
+            <table border="0" width="100%" height="99%">
             <?php
                             // Récupère pour le groupe la question les informations
                             if (openDb()){
@@ -41,7 +41,7 @@ include "inc/common.inc.php";
                                     if ($combien){
                                         $pourcentHeight = intval(100/$combien);
                                         while (list($id,$record) = each($allAnswers)){
-                                            echo '<tr height="'.$pourcentHeight.'%"><td align="center">'.$record['valeur'].'</td></tr>';
+                                            echo '<tr height="'.$pourcentHeight.'%"><td align="center" style="border-bottom:2px solid #E94A3D"><div style="width:80%">'.$record['valeur'].'</div></td></tr>';
                                         }
                                     }
                                 }else{
