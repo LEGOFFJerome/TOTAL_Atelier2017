@@ -27,8 +27,8 @@
 		<!-- [ CONTENT ] -->
 		<div class="globalContent">
 			<section class="choixGroupe">
-			<div class="ariane"><a href="index.php">Accueil</a> | Choix de votre groupe de travail </div>
-			<div class="titre">Choisir votre groupe : </div>
+			<div class="ariane"><a href="index.php">Accueil</a> | choix de votre table de travail </div>
+			<div class="titre">Choisir votre table : </div>
 				<ul>
 					<li><div data-id="1" class="selGroup">TABLE 1</div></li>
 					<li><div data-id="2" class="selGroup">TABLE 2</div></li>

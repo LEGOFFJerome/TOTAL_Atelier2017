@@ -1,6 +1,6 @@
 <?php
 ini_set('error_reporting', E_ALL);
-ini_set('display_errors', TRUE);
+ini_set('display_errors', FALSE);
 
 include "inc/common.inc.php";
 
@@ -37,12 +37,12 @@ include "inc/common.inc.php";
             <section class="admin">
                 <div class="titAdmin">ADMIN TOTAL EP</div>
                 <ul>
-                    <li id="openStep">Ouvrir les étapes</li>
-                    <li id="selSentence1" <?php if ($_GET['step']==1){echo 'class="li-on"';} ?>>Phrases étapes 1</li>
-                    <li id="selSentence2" <?php if ($_GET['step']==2){echo 'class="li-on"';} ?>>Phrases étapes 2</li>
-                    <li id="selSentence3" <?php if ($_GET['step']==3){echo 'class="li-on"';} ?>>Phrases étapes 3</li>
-                    <li id="selSentence4" <?php if ($_GET['step']==4){echo 'class="li-on"';} ?>>Phrases étapes 4</li>
-                    <li id="selSentence5" <?php if ($_GET['step']==5){echo 'class="li-on"';} ?>>Phrases étapes 5</li>
+                    <li id="openStep" class="li-on">Ouvrir questions</li>
+                    <li id="selSentence1">Réponses quest. 1</li>
+                    <li id="selSentence2">Réponses quest. 2</li>
+                    <li id="selSentence3">Réponses quest. 3</li>
+                    <li id="selSentence4">Réponses quest. 4</li>
+                    <li id="selSentence5">Réponses quest. 5</li>
                     <li id="selSentence5">prev.<select onchange="javascript:if (this.value) window.open(this.value);">
                             <option selected>-</option>
                             <option value="admin-realTimeSentence.php?step=1">1</option>
@@ -63,7 +63,7 @@ include "inc/common.inc.php";
                             </p>
                             <div id="previewSelected" onclick="document.location.href='admin-previewSelected.php?step=<?php echo $_GET["step"];?>'">Afficher la sélection</div>
                         </div>
-                <div style="clear:both;floaqt:none;">&nbsp;</div>
+                <div style="clear:both;float:none;">&nbsp;</div>
                 <?php
                 if(isset($_GET['step']) && $_GET['step']!=""){
                     ?>

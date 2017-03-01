@@ -35,15 +35,14 @@ include "inc/common.inc.php";
 
 			<section class="etape">
 			<div class="loadAnim"><img src="imgs/spin.gif" width="30" height="30" border="0" alt=""></div>
-				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre groupe de travail</a> | <a href="etapes.php">choisir votre étape</a> | Étape 1 : </div>
-				<span class="titre">Le titre de la question</span>
-
+				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre table de travail</a> | <a href="etapes.php">choisir votre question</a> | Question 1 : </div>
+				<span class="titre">Collective Efficiency</span>
 				<div class="contentQuest">
 					<div class="colLeft">
 					<span class="bigNumber">1</span>
-					<div class="txtQuest">La question en Francais</div>
-					<div class="txtQuestEn">English traduction of the question</div>
-                    <div class="btBack"> retour / back </div>
+					<div class="txtQuest">On the topic of E&P’s collective efficiency expressed within the survey, what are the two or three main points to be addressed in your opinion ? Why ?</div>
+					<div class="txtQuestEn">Sur le thème de l’efficacité collective de l’E&P exprimé dans le diagnostic, quels sont les deux ou trois points principaux à traiter selon vous ? Pourquoi ?</div>
+                    <div class="btBack"> retour aux questions </div>
                     </div>
 					<div class="colRight">
 						<div id="previous" style="color:white;">
@@ -72,7 +71,7 @@ include "inc/common.inc.php";
 								<?php
                                 if ($combien < $MAX_ANSWER){
                                 ?>
-                                <textarea name="phrase" id="phrase" class="txtEtap1" placeholder="phrase"></textarea>
+                                <textarea name="phrase" id="phrase" class="txtEtap1" placeholder="réponse"></textarea>
                                 <div style="color:gray;font-size:15px;font-weight:bold;float:right"><?php echo($combien+1)." / ".$MAX_ANSWER; ?></div><input type="submit" class="recordField" id="recordField" value="enregistrer"/>
                                 <?php
                                 }

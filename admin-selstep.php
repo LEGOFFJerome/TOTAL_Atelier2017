@@ -43,12 +43,12 @@ include "inc/common.inc.php";
             <section class="admin">
                 <div class="titAdmin"> ADMIN TOTAL EP</div>
                 <ul>
-                    <li id="openStep" class="li-on">Ouvrir les étapes</li>
-                    <li id="selSentence1">Phrases étapes 1</li>
-                    <li id="selSentence2">Phrases étapes 2</li>
-                    <li id="selSentence3">Phrases étapes 3</li>
-                    <li id="selSentence4">Phrases étapes 4</li>
-                    <li id="selSentence5">Phrases étapes 5</li>
+                    <li id="openStep" class="li-on">Ouvrir questions</li>
+                    <li id="selSentence1">Réponses quest. 1</li>
+                    <li id="selSentence2">Réponses quest. 2</li>
+                    <li id="selSentence3">Réponses quest. 3</li>
+                    <li id="selSentence4">Réponses quest. 4</li>
+                    <li id="selSentence5">Réponses quest. 5</li>
                     <li id="selSentence5">prev.<select onchange="javascript:if (this.value) window.open(this.value);">
                             <option selected>-</option>
                             <option value="admin-realTimeSentence.php?step=1">1</option>

@@ -35,15 +35,15 @@ include "inc/common.inc.php";
 
 			<section class="etape">
 			<div class="loadAnim"><img src="imgs/spin.gif" width="30" height="30" border="0" alt=""></div>
-				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre groupe de travail</a> | <a href="etapes.php">choisir votre étape</a> | Étape 3 : </div>
-				<span class="titre">Le titre de la question</span>
+				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre table de travail</a> | <a href="etapes.php">choisir votre question</a> | Question 3 : </div>
+				<span class="titre">Behaviours</span>
 
 				<div class="contentQuest">
 					<div class="colLeft">
 					<span class="bigNumber">3</span>
-					<div class="txtQuest">La question en Francais</div>
-					<div class="txtQuestEn">English traduction of the question</div>
-                    <div class="btBack"> retour / back </div>
+					<div class="txtQuest">How will the individual behaviours enable us to collectively be more efficient ?</div>
+					<div class="txtQuestEn">Comment les comportements individuels nous permettront-ils d’être plus efficaces collectivement ?</div>
+                    <div class="btBack"> retour aux questions </div>
 					</div>
 					<div class="colRight">
 						<div id="previous" style="color:white;">
@@ -72,7 +72,7 @@ include "inc/common.inc.php";
 								<?php
                                 if ($combien < $MAX_ANSWER){
                                 ?>
-								<textarea name="phrase" id="phrase" class="txtEtap1" placeholder="phrase"></textarea>
+								<textarea name="phrase" id="phrase" class="txtEtap1" placeholder="réponse"></textarea>
 								<div style="color:gray;font-size:15px;font-weight:bold;float:right"><?php echo($combien+1)." / ".$MAX_ANSWER; ?></div><input type="submit" class="recordField" id="recordField" value="enregistrer"/>
                                 <?php
                                 }

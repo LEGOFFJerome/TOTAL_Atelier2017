@@ -49,8 +49,10 @@ function recordStep(){
 	global	$msock;
     // c'est quel step
     $stepActif = preg_replace("/[^0-9]/", "",$_POST['step']);
+    $microTimeStamp = get_millis();
+        writeToLog($microTimeStamp);
     $textToStore = nl2br(htmlentities($_POST["phrase"], ENT_QUOTES, 'UTF-8'));
-	$sql ="INSERT INTO `reponses_total` (`groupe`, `etape`, `valeur`,`last_edit`) VALUES ('".$_COOKIE["total-anim"]."','".$stepActif."','".$textToStore."',UNIX_TIMESTAMP(now()))";
+	$sql ="INSERT INTO `reponses_total` (`groupe`, `etape`, `valeur`,`last_edit`) VALUES ('".$_COOKIE["total-anim"]."','".$stepActif."','".$textToStore."','".$microTimeStamp."')";
 
     writeToLog($sql);
 
@@ -69,5 +71,10 @@ function encodeArray($p_array){
 		$p_array[$key] = urlencode($val);
 	}
 	return $p_array;
+}
+
+function get_millis(){
+    list($usec, $sec) = explode(" ", microtime());
+    return floor(((float)$usec + (float)$sec)*1000);
 }
 ?>

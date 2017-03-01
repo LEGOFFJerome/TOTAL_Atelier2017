@@ -1,15 +1,17 @@
 <?php
-/*
+
 $BDD_SERV = "localhost";
 $BDD = "anim-total";
 $BDD_LOG = "root";
 $BDD_PASS = "";
-*/
+/*
 
 $BDD_SERV = "ifasrgdsusidebdd.mysql.db";
 $BDD = "ifasrgdsusidebdd";
 $BDD_LOG = "ifasrgdsusidebdd";
 $BDD_PASS = "uhgQs9878a";
+*/
+
 
 $MAX_ANSWER = 7;
 /******** fonction open Db *************/
@@ -83,7 +85,6 @@ function getSelQuestData($step){
 
 function writeTolog($log){
 	return;
-    $urlLog = 'c:\log.txt';
     $urlLog = 'c:\Users\jlegoff\Documents\GitHub\TOTAL_Atelier2017\log.txt';
 
 	$fh=fopen($urlLog,"a");

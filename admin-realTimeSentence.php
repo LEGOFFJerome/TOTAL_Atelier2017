@@ -34,7 +34,7 @@ include "inc/common.inc.php";
             <div class="no-js-warning">Ce site nécessite l'utilisation de JavaScript!</div>
         </noscript>
 		<!-- [ CONTENT ] -->
-        <div id="histo" style="position:absolute;width:100%;color:gray;text-align:center;font-size:20px;">
+        <div id="histo" style="position:absolute;width:100%;color:gray;text-align:center;font-size:20px;bottom:0px">
 
         </div>
 		<div class="globalContent">
@@ -51,6 +51,8 @@ include "inc/common.inc.php";
         loadInterval = null;
         displayInterval = null;
         currentTxt = "";
+        posY = "100px";
+
         function getData() {
             clearInterval(loadInterval);
             $.ajax({
@@ -75,10 +77,10 @@ include "inc/common.inc.php";
 
        function displayData(){
             clearInterval(displayInterval);
-
+            posY = parseInt($(window).height()/2)+"px";
             if (sentenceArray.length){
                 currentTxt = sentenceArray[0];
-               $('.globalContent').append('<div class="phraseElem" style="display:none"><div class="placeHolder" style="display:none;width:100%"></div>'+sentenceArray[0]+'</div>');
+               $('.globalContent').append('<div class="phraseElem" style="margin-top:'+posY+'; display:none"><div class="placeHolder" style="display:none;width:100%"></div>'+sentenceArray[0]+'</div>');
                 var l_T1                    = 500;
                 var l_T2                    = 1000;
                 var l_T3                    = 3000;

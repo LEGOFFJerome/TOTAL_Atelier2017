@@ -35,15 +35,15 @@ include "inc/common.inc.php";
 
 			<section class="etape">
 			<div class="loadAnim"><img src="imgs/spin.gif" width="30" height="30" border="0" alt=""></div>
-				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre groupe de travail</a> | <a href="etapes.php">choisir votre étape</a> | Étape 4 : </div>
-				<span class="titre">Le titre de la question</span>
+				<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre table de travail</a> | <a href="etapes.php">choisir votre question</a> | Question 4 : </div>
+				<span class="titre">Management roles : situations </span>
 
 				<div class="contentQuest">
 					<div class="colLeft">
 					<span class="bigNumber">4</span>
-					<div class="txtQuest">La question en Francais</div>
-					<div class="txtQuestEn">English traduction of the question</div>
-                    <div class="btBack"> retour / back </div>
+					<div class="txtQuest">Identify situations when the implementation of the management roles would make the operating principles more efficient and help achieve the ambition</div>
+					<div class="txtQuestEn">Identifiez des situations où la mise en œuvre des rôles managériaux permettraient aux principes de fonctionnement d’être plus efficaces et aiderait à atteindre l’ambition</div>
+                    <div class="btBack"> retour aux questions </div>
 					</div>
 					<div class="colRight">
 						<div id="previous" style="color:white;">
@@ -68,11 +68,11 @@ include "inc/common.inc.php";
                         </div>
                         <form method="post" action="record.php" id="myForm" name="myForm">
                             <div style="clear:both;margin-bottom:5px;">
-                                <input id="step" name="step" type="hidden" value="step2">
+                                <input id="step" name="step" type="hidden" value="step4">
 								<?php
                                 if ($combien < $MAX_ANSWER){
                                 ?>
-								<textarea name="phrase" id="phrase" class="txtEtap1" placeholder="phrase"></textarea>
+								<textarea name="phrase" id="phrase" class="txtEtap1" placeholder="réponse"></textarea>
 								<div style="color:gray;font-size:15px;font-weight:bold;float:right"><?php echo($combien+1)." / ".$MAX_ANSWER; ?></div><input type="submit" class="recordField" id="recordField" value="enregistrer"/>
                                 <?php
                                 }

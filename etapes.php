@@ -27,15 +27,15 @@
 		<!-- [ CONTENT ] -->
 		<div class="globalContent">
 			<section class="choixEtape">
-			<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre groupe de travail</a> | choisir votre étape </div>
+			<div class="ariane"><a href="index.php">Accueil</a> | <a href="groupes.php">choix de votre table de travail</a> | choisir votre question </div>
 
 			<div class="titre">Choisir votre étape : </div>
 				<ul>
-					<li class="disabled"><div data-id="1" class="selStep hab1">Titre Sequence 1</div></li>
-					<li class="disabled"><div data-id="2" class="selStep hab2">Titre Sequence 2</div></li>
-					<li class="disabled"><div data-id="3" class="selStep hab3">Titre Sequence 3</div></li>
-					<li class="disabled"><div data-id="4" class="selStep hab4">Titre Sequence 4</div></li>
-					<li class="disabled"><div data-id="5" class="selStep hab5">Titre Sequence 5</div></li>
+					<li class="disabled"><div data-id="1" class="selStep hab1">Collective Efficiency </div></li>
+					<li class="disabled"><div data-id="2" class="selStep hab2">Operating principles</div></li>
+					<li class="disabled"><div data-id="3" class="selStep hab3">Behaviours</div></li>
+					<li class="disabled"><div data-id="4" class="selStep hab4">Management roles : situations </div></li>
+					<li class="disabled"><div data-id="5" class="selStep hab5">Management roles : difficulties</div></li>
 				</ul>
 			</section>
 			<!-- [ /CONTENT ] -->

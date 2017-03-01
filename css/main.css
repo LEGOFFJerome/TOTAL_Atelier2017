@@ -54,5 +54,5 @@ SECTION.admin LI.li-on  {padding:3px;color:black;float:left;background:white;lis
 
 #previewSelected {cursor:pointer;margin-top:20px;float:left;width:200px;height:30px;font-size15px;font-weight:bold;color:white;background-color:#E94A3D;padding:5px;text-align:center;border:1px solid white;}
 
-.phraseElem {border:5px solid #E94A3D; border-radius: 25px;color:gray;font-size:30px;max-width:60%;margin:auto;margin-top:400px;text-align: center;background-color: white;padding:10px;}
+.phraseElem {border:5px solid #E94A3D; border-radius: 25px;color:gray;font-size:30px;max-width:60%;margin:auto;text-align: center;background-color: white;padding:10px;}
 
